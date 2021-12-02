@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>IE Midterm</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item1">
+        <form name="submit-form">
+          <p class="heading">Mr. or Ms.?</p>
+          <br />
+          <label for="name">Name:</label>
+          <input name="name" id="name" value="" class="name" />
+          <br /><br /><br />
+          <input type="radio" name="gender" value="M" id="male" /> Male <br />
+          <input type="radio" name="gender" value="F" id="female" /> Female
+          <br />
+          <br />
+          <input
+            type="button"
+            value="Submit"
+            class="button"
+            onclick="submitForm(event)"
+          />
+          <br />
+          <button type="button" class="button" onclick="saveGender()">
+            Save
+          </button>
+        </form>
+      </div>
+      <div class="grid-item2">
+        <p class="heading">Prediction</p>
+        <p id="gender-prediction"></p>
+        <p id="probability-prediction"></p>
+      </div>
+      <div class="grid-item3">
+        <pre class="saved-answer">
+Saved
+Answer
+        </pre>
+        <p id="stored-answer"></p>
+        <button
+          type="button"
+          id="clear"
+          class="button"
+          onclick="clearSavedAnswer()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="grid-item4">
+        <p id="warning" class="error"></p>
+      </div>
+    </div>
+  </body>
+</html>

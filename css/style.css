@@ -1,0 +1,91 @@
+
+
+/* Set the rectangular in center of page that contains the submit form, prediction results, saved answer and warning parts */
+.grid-container {
+  display: grid; /* rectangular becomes a grid container */
+  grid-template-columns: 2fr 2fr; /* determine the number of columns and their size */
+  grid-template-rows: 2fr 2fr 1fr; /* determine the number of rows and their size */
+  grid-template-areas:
+    "item1 item2"
+    "item1 item3"
+    "item4 item4"; /* name the grid items to reference them */
+  grid-column-gap: 50px; /* size of the gap between columns */
+  max-width: 100%; /* define maximum width related to the containing block */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* set white color for reactangular background with opacity */
+  padding: 20px 20px; /* generate space around the rectangular */
+  border-radius: 15px; /* set radius of rectangular corner */
+  position: absolute; /* rectangular position relative to window*/
+  top: 50%; /* vertical position */
+  left: 50%; /* horizontal position */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* move the rectangular along x and y axis */
+}
+
+/* Place submit form in centeral rectangular */
+.grid-item1 {
+  grid-area: item1; /* reference to the grid items of the grid container */
+}
+
+/* Place prediction result part in centeral rectangular */
+.grid-item2 {
+  grid-area: item2;
+}
+
+/* Place saved answer part in centeral rectangular and set its border properties */
+.grid-item3 {
+  grid-area: item3;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: gray;
+}
+
+/* Place warning part in centeral rectangular */
+.grid-item4 {
+  grid-area: item4;
+}
+
+/* Set properties of headings in central rectangular */
+.heading {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Set properties of saved answer part in central rectangular */
+.saved-answer {
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Set properties of buttons in central rectangular */
+.button {
+  text-align: center; /* set horizontal alignment of text on button */
+  font-size: 13px;
+  margin: 1px 1px; /* set space around the button */
+  cursor: pointer; /* the cursor is a pointer when mouse over the button  */
+  border-color: black;
+  border-radius: 5px;
+  width: 70px;
+}
+/* Change the background of buttons when mouse over them */
+.button:hover {
+  background-color: rgb(252, 224, 249);
+}
+
+/* Set border for single line text input in submit form */
+.name {
+  border-width: 1px;
+}
+
+/* Set properties for font of the warning part */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
