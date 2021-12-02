@@ -1,4 +1,10 @@
-
+/* Set image background */
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat; /* the image willnot repeated */
+  background-attachment: fixed; /* will not scroll with the page */
+  background-size: 100% 100%; /* dimension is based on the window size */
+}
 
 /* Set the rectangular in center of page that contains the submit form, prediction results, saved answer and warning parts */
 .grid-container {
