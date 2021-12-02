@@ -86,6 +86,14 @@ function clearFromStorage(name){
 
 // Save the gender of entered name in local storage by save button
 function saveGender(){
+    if(!validateName()){
+        document.getElementById("stored-answer").innerHTML = "";
+        document.getElementById("male").checked = false;
+        document.getElementById("female").checked = false;
+        document.getElementById("gender-prediction").innerHTML = "";
+        document.getElementById("probability-prediction").innerHTML = "";
+        return false;
+    }
     let maleRadioButtonChecked = document.getElementById("male").checked;
     let femaleRadioButtonChecked = document.getElementById("female").checked;
     // when a radio button is checked, it will determine the gender that save in local storage
